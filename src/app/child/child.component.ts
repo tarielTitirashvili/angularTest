@@ -1,4 +1,4 @@
-import { Component, Input, ViewEncapsulation } from '@angular/core';
+import { Component, EventEmitter, Input, Output, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'angular-child',
@@ -7,7 +7,11 @@ import { Component, Input, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.ShadowDom
 })
 export class ChildComponent {
-  @Input () public text: string = ''
-  @Input () public jobs: string[] = []
+  @Input() public text: string = ''
+  @Input() public jobs: string[] = []
+  @Output() public dataFromChild: EventEmitter<any> = new EventEmitter()
+  sendData(){
+    this.dataFromChild.emit(`hello form childe component`)
+  }
   constructor (){}
 }

@@ -1,3 +1,3 @@
 <!-- <h1>parent works! {{textForChilde}}</h1> -->
 <h1>parent works!</h1>
-<angular-child [text]="textForChilde" [jobs]="jobs"></angular-child>
+<angular-child (dataFromChild)="dataFromChild($event)" [text]="textForChilde" [jobs]="jobs"></angular-child>

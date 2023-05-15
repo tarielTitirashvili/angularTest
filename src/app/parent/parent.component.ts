@@ -9,5 +9,8 @@ export class ParentComponent {
 
   public textForChilde: string = 'text from ts component'
   public jobs: string[] = ['samushao1', 'samushao2', 'samushao3', 'samushao4']
+  dataFromChild(e: any){
+    console.log(e)
+  }
 
 }
