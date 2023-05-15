@@ -8,5 +8,6 @@ import { Component, Input, ViewEncapsulation } from '@angular/core';
 })
 export class ChildComponent {
   @Input () public text: string = ''
+  @Input () public jobs: string[] = []
   constructor (){}
 }
