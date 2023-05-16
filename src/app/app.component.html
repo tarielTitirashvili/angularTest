@@ -6,3 +6,9 @@
     sending text from app component
   </p>
 </angular-test-component>
+<!-- with <ng-container> it will not have html element it works like fragment in React -->
+<ng-container *ngFor="let el of data">
+  <h3 *ngIf=" el.id >= 1 ">
+    {{ el.name }}
+  </h3>
+</ng-container>
